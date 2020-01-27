@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.6rem;
+    grid-auto-rows: minmax(400px,auto);
+}
+
+.container {
+    background: rgb(245, 245, 245);
+    /* transform: scale(1,1); */
+    padding: 0 0 1rem 0;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.03,1.03);
+    z-index: 10;
+}
+
+@media screen and (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

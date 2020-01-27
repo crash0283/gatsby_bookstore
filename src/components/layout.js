@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import icons from "glyphicons"
 
 import Header from "./header"
 import "./layout.css"
@@ -34,12 +35,18 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <footer style={{ height: "3rem", background: "rgb(245,245,245)", textAlign: "center" }}>
+        © {new Date().getFullYear()}, Powered by
+        {` `}
+        <a
+          href="https://www.gatsbyjs.org"
+          style={{ background: "none", textShadow: "none" }}
+        >
+          Gatsby
+        </a>
+        <div>{icons.strawberry}</div>
+      </footer>
     </>
   )
 }
